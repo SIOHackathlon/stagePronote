@@ -1,0 +1,23 @@
+{
+"name" :"Premiere_Extension",
+"manifest_version": 2,
+"version" :"2.0",
+"description" :"Test1",
+"options_page":"pageOptions.html",
+
+  "permissions": [
+    "https://api.btssio.local/"
+  ],
+"browser_action" :
+	{
+		"default_icon" : "icone.png",
+		"default_popup" :"afftexte.html"
+	},
+	
+	  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["commSite.js", "fonctions.js"]
+    }
+	]
+}
